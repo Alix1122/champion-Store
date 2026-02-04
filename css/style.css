@@ -204,13 +204,28 @@ header .container .logo img {
 /* Home Start */
 .home {
     position: relative;
-    background: url(/img/bg-home.jpg) center right / cover;
     width: 100%;
     height: 100vh;
     z-index: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.home img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-position: center right;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center right;
+    background-repeat: no-repeat;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
 }
 
 .home .container h1 {
@@ -792,7 +807,7 @@ header .container .logo img {
         justify-content: flex-start;
         position: fixed;
         top: 0;
-        right: -300px;
+        right: -100%;
         height: 100vh;
         width: 300px;
         background-color: var(--border-color);
